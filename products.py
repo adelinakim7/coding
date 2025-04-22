@@ -7,3 +7,8 @@ def print_cheap_products(products):
     name, price = product
     if price < 80:
         print(name)
+def compute():     
+    for name, price, quantity in products:
+        result = price * quantity
+        print(f"{name} — всего на {result} рублей")
+compute()
