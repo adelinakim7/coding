@@ -8,3 +8,5 @@ def reading(filename):
     try:
         with open('file.txt', 'r') as file:
             print(file.reading())
+except FileNotFoundError:
+      print('Файл не найден')
