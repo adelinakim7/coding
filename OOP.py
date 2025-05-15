@@ -64,3 +64,21 @@ account.withdraw(3000)
 account.withdraw(-100)     
 
 print("Итоговый баланс:", account.get_balance(), "руб.")
+
+class Animal:
+    def make_sound(self):
+        print("Некоторый звук животного")
+
+class Dog(Animal):
+    def make_sound(self):
+        print("Гав-гав!")
+
+class Cat(Animal):
+    def make_sound(self):
+        print("Мяу-мяу!")
+
+animals = [Animal(), Dog(), Cat(), Dog(), Cat()]
+
+print("Звуки животных:")
+for animal in animals:
+    animal.make_sound()
