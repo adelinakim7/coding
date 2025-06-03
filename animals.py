@@ -1,29 +1,37 @@
 class Shelter:
     def __init__(self):
         self.animals = []
-    def add_animal(self,animal):
+    def add_animal(self, animal):
         self.animals.append(animal)
     def show_animals(self):
         if not self.animals:
-            print("Приют пуст")
+            print("Приют пуст.")
         else:
             for animal in self.animals:
-                animal.display_info() 
+                animal.display_info()
+    def find_by_species(self, species_name):
+        found = False
+        for animal in self.animals:
+            if animal.get_species() == species_name:
+                animal.display_info()
+                found = True
+        if not found:
+            print(f"Нет животных вида {species_name}")
 class Animal:
-    def __init__ (self, name, species, age,):
+    def __init__(self, name, species, age):
         self.name = name
         self.species = species
         self.age = age
     def display_info(self):
-        print(f"Имя:{my_animal.name}, Вид: {my_animal.species}, Возраст: {my_animal.age}")
+        print(f"Имя: {my_animal.name}, Вид: {my_animal.species}, Возраст: {my_animal.age}")
 if __name__ == "__main__":
-    my_animal = Animal("Джексон", "Собака", 5)
+    my_animal = Animal("Шарик", "собака", 1)
     my_animal.display_info()
     shelter = Shelter()
-    print(shelter.animals)   
+    print(shelter.animals)
     shelter.add_animal(my_animal)
-     
-print(f"В приюте сейчас {len(shelter.animals)} животных:")
+    
+print(f"В приюте сейчас {len(shelter.animals)} животных.")
 for animal in shelter.animals:
     animal.display_info()
     
