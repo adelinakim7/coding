@@ -1,12 +1,10 @@
-1)class Animal:
+class Animal:
     def __init__ (self, name, species, age,):
         self.name = name
         self.species = species
         self.age = age
-
+    def display_info(self):
+        print(f"Имя:{my_animal.name}, Вид: {my_animal.species}, Возраст: {my_animal.age}")
 if __name__ == "__main__":
-    my_animal = Animal(name="Джексон", species="Собака", age=5)
-    
-    print(f"Имя: {my_animal.name}")
-    print(f"Вид: {my_animal.species}")
-    print(f"Возраст: {my_animal.age} лет")
+    my_animal = Animal("Джексон", "Собака", 5)
+    my_animal.display_info()
