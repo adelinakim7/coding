@@ -7,3 +7,9 @@ class Student:
     
 my_student = Student("Розанна Пак", "444")
 my_student.display_info()
+
+class Group:
+    def __init__(self):
+        self.student = []
+group = Group()
+print(group.student)
